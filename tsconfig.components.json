@@ -5,15 +5,13 @@
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
-    // "noEmit": true,
     "esModuleInterop": true,
-    "module": "system",
+    "module": "commonjs",    
     "moduleResolution": "node",
-    // "resolveJsonModule": true,
-    // "isolatedModules": true,
+    "removeComments": true,
     "jsx": "react",
     "declaration": true,
-    "out": "./build/components/index.js"
+    "outDir": "./lib"
   },
   "include": [
     "src/components**/*.ts",
