@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   purge: {
     enabled: true,
@@ -8,7 +10,12 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        ["primary"]: `var(--ds-primary, ${colors["red"]["400"]})`,
+        ["primary-dark"]: `var(--ds-primary-dark, ${colors["red"]["500"]})`,
+      },
+    },
   },
   variants: {
     extend: {},

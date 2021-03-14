@@ -7,8 +7,7 @@ const Page = () => {
     <Layout>
       <h1 className="text-2xl font-bold text-gray-800 mb-4">Button</h1>
 
-      <div className="mb-4"><Button variant="primary">Primary button</Button></div>
-      <Button variant="secondary">Secondary button</Button>
+      <Button >Secondary button</Button>
     </Layout>
   )
 }

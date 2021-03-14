@@ -2,7 +2,7 @@ import React from 'react'
 
 type Props = {
   children: React.ReactNode
-  variant: 'primary' | 'secondary'
+  variant?: 'primary' | 'secondary'
 }
 
 const variants = {
@@ -11,7 +11,7 @@ const variants = {
 }
 
 const Button = ({ children, variant, ...rest }: Props) => {
-  return <button {...rest} className={variants[variant]}>{children}</button>
+  return <button {...rest} className="bg-primary hover:bg-primary-dark">{children}</button>
 }
 
 export default Button
