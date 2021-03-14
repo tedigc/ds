@@ -2,10 +2,13 @@
   "name": "ds",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "build-components": "tsc --project tsconfig.components.json"
   },
   "dependencies": {
     "next": "10.0.8",

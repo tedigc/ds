@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    // "noEmit": true,
+    "esModuleInterop": true,
+    "module": "system",
+    "moduleResolution": "node",
+    // "resolveJsonModule": true,
+    // "isolatedModules": true,
+    "jsx": "react",
+    "declaration": true,
+    "out": "./build/components/index.js"
+  },
+  "include": [
+    "src/components**/*.ts",
+    "src/components**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

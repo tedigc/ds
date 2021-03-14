@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Button } from "../components";
 
 const Page = () => {
   return (
@@ -7,7 +8,7 @@ const Page = () => {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      Hello, world!
+      <Button>Hello</Button>
     </div>
   );
 };
