@@ -1,4 +1,4 @@
-const colors = require("tailwindcss/colors");
+// const colors = require("tailwindcss/colors");
 
 module.exports = {
   purge: {
@@ -9,16 +9,22 @@ module.exports = {
     ],
   },
   darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {
-      colors: {
-        ["primary"]: `var(--ds-primary, ${colors["red"]["400"]})`,
-        ["primary-dark"]: `var(--ds-primary-dark, ${colors["red"]["500"]})`,
-      },
-    },
-  },
+  theme: {},
+  // theme: {
+  //   extend: {
+  //     colors: {
+  //       ["primary"]: `var(--ds-primary, ${colors["red"]["400"]})`,
+  //       ["primary-dark"]: `var(--ds-primary-dark, ${colors["red"]["500"]})`,
+  //     },
+  //   },
+  // },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ["active", "disabled"],
+      cursor: ["disabled"],
+      ringColor: ["active", "disabled"],
+      ringWidth: ["active", "disabled"],
+    },
   },
   plugins: [],
 };

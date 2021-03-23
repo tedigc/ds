@@ -1,17 +1,35 @@
-import React from 'react'
+import React, { HTMLProps } from "react";
+import classnames from "classnames";
 
-type Props = {
-  children: React.ReactNode
-  variant?: 'primary' | 'secondary'
-}
+export type ButtonProps = HTMLProps<HTMLButtonElement> & {
+  children: React.ReactNode;
+  variant?: "primary" | "secondary" | "outline";
+};
 
-const variants = {
-  'primary': 'transition-all px-5 py-2 bg-red-400 text-white tracking-wide font-semibold rounded-md hover:bg-red-500 border-solid rounded-md border-2 border-red-400 hover:border-red-500 hover:text-red-500',
-  'secondary': 'transition-all px-5 py-2 bg-white text-red-400 tracking-wide font-semibold border-solid rounded-md border-2 border-red-400 hover:border-red-500 hover:text-red-500'
-}
+const styles = {
+  common:
+    "block transition-all px-4 py-2 text-base rounded text-white font-light ",
+  disabled: "disabled:bg-gray-300 disabled:cursor-not-allowed disabled:ring-0",
+  primary:
+    "bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-800 active:ring-2 active:ring-indigo-500",
+  secondary:
+    "bg-indigo-100 text-indigo-600 hover:bg-indigo-200 active:bg-indigo-300 active:ring-2 active:ring-indigo-500",
+};
 
-const Button = ({ children, variant, ...rest }: Props) => {
-  return <button {...rest} className="bg-primary hover:bg-primary-dark">{children}</button>
-}
+export const Button = (props: ButtonProps) => {
+  const { variant = "primary", className, children, ...rest } = props;
 
-export default Button
+  return (
+    <button
+      {...rest}
+      className={classnames(
+        styles.common,
+        styles.disabled,
+        styles[variant],
+        className
+      )}
+    >
+      {children}
+    </button>
+  );
+};
