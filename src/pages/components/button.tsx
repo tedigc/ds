@@ -11,6 +11,9 @@ const Page = () => {
       <Button className="mb-2" variant="secondary">
         Button
       </Button>
+      <Button className="mb-2" variant="outline">
+        Button
+      </Button>
       <Button disabled>Button</Button>
     </Layout>
   );
