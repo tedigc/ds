@@ -1,7 +1,6 @@
 import React, { SyntheticEvent } from "react";
 import Head from "next/head";
-import { Button } from "../../../lib";
-import { Input } from "../../components";
+import { Button, Input } from "../../components";
 
 const Page = () => {
   const handleSubmit = (e: SyntheticEvent) => {
