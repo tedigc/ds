@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Button } from "../components";
 
 const Page = () => {
   return (
