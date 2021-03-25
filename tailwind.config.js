@@ -12,6 +12,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      borderWidth: {
+        1: "1px",
+      },
       colors: {
         ["primary"]: `var(--ds-primary, ${colors["red"]["400"]})`,
         ["primary-dark"]: `var(--ds-primary-dark, ${colors["red"]["500"]})`,
@@ -22,8 +25,9 @@ module.exports = {
     extend: {
       backgroundColor: ["active", "disabled"],
       cursor: ["disabled"],
-      ringColor: ["active", "disabled"],
-      ringWidth: ["active", "disabled"],
+      ringColor: ["hover", "active", "disabled"],
+      ringWidth: ["hover", "active", "disabled"],
+      textColor: ["disabled"],
     },
   },
   plugins: [],

@@ -1,5 +1,28 @@
 import React, { PropsWithChildren } from "react";
-import Link from "next/link";
+import classnames from "classnames";
+import Link, { LinkProps } from "next/link";
+import { useRouter } from "next/router";
+
+type NavLinkProps = LinkProps & PropsWithChildren<{ string?: unknown }>;
+
+const NavLink = (props: NavLinkProps) => {
+  const { children, ...linkProps } = props;
+  const router = useRouter();
+  const isActive = router.pathname === props.href;
+  if (isActive) console.log("isActive", props.href);
+  return (
+    <Link {...linkProps}>
+      <a
+        className={classnames(
+          "transition-all hover:text-indigo-50 py-2",
+          isActive ? "text-indigo-50" : "text-indigo-400"
+        )}
+      >
+        {children}
+      </a>
+    </Link>
+  );
+};
 
 type LayoutProps = PropsWithChildren<{ [key: string]: unknown }>;
 
@@ -11,16 +34,8 @@ export const Layout = ({ children }: LayoutProps) => {
           Bento Design System
         </p>
         <p className="block text-gray-50 text-md mb-6">Components</p>
-        <Link href="/components/button">
-          <a className="transition-all text-indigo-400 hover:text-indigo-50 py-2">
-            Button
-          </a>
-        </Link>
-        <Link href="/components/input">
-          <a className="transition-all text-indigo-400 hover:text-indigo-50 py-2">
-            Input
-          </a>
-        </Link>
+        <NavLink href="/components/button">Button</NavLink>
+        <NavLink href="/components/input">Input</NavLink>
       </nav>
       <div className="p-10">{children}</div>
     </div>
