@@ -14,7 +14,7 @@ const NavLink = (props: NavLinkProps) => {
     <Link {...linkProps}>
       <a
         className={classnames(
-          "transition-all hover:text-indigo-50 py-2",
+          "transition-all hover:text-indigo-50 py-1",
           isActive ? "text-indigo-50" : "text-indigo-400"
         )}
       >
@@ -33,9 +33,13 @@ export const Layout = ({ children }: LayoutProps) => {
         <p className="block text-gray-50 text-xl mb-6 font-bold tracking-wide">
           Bento Design System
         </p>
-        <p className="block text-gray-50 text-md mb-6">Components</p>
+
+        <p className="block text-gray-50 text-md mb-2">Components</p>
         <NavLink href="/components/button">Button</NavLink>
         <NavLink href="/components/input">Input</NavLink>
+
+        <p className="block text-gray-50 text-md mb-2 mt-6">Examples</p>
+        <NavLink href="/examples/form">Form</NavLink>
       </nav>
       <div className="p-10">{children}</div>
     </div>
