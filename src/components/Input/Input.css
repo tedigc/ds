@@ -18,7 +18,15 @@
   @apply ring-1 ring-gray-300 ring-inset;
   @apply hover:ring-blue-400;
   @apply focus:ring-2 focus:outline-none focus:ring-blue-400;
+  @apply focus-within:ring-2 focus-within:outline-none focus-within:ring-blue-400;
   @apply disabled:bg-gray-100 disabled:text-gray-500 disabled:cursor-not-allowed disabled:ring-gray-300;
+}
+
+.input-group-error {
+  @apply ring-red-400;
+  @apply hover:ring-red-400;
+  @apply focus:ring-2 focus:ring-red-400 focus:outline-none;
+  @apply focus-within:ring-2 focus-within:ring-red-400 focus-within:outline-none;
 }
 
 .input-group .input {

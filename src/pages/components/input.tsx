@@ -53,6 +53,17 @@ const Page = () => {
           <InputSuffix>.00</InputSuffix>
         </InputGroup>
       </div>
+
+      <h2 className="text-lg font-bold text-gray-800 mb-2 flex">
+        With prefix and suffix error
+      </h2>
+      <div className="flex mb-5">
+        <InputGroup error>
+          <InputPrefix>£</InputPrefix>
+          <Input />
+          <InputSuffix>.00</InputSuffix>
+        </InputGroup>
+      </div>
     </>
   );
 };
