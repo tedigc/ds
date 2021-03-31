@@ -39,7 +39,7 @@ export const Layout = ({ children }: LayoutProps) => {
         <NavLink href="/components/input">Input</NavLink>
 
         <p className="block text-gray-50 text-md mb-2 mt-6">Examples</p>
-        <NavLink href="/examples/form">Form</NavLink>
+        <NavLink href="/examples/forms">Forms</NavLink>
       </nav>
       <div className="p-10">{children}</div>
     </div>

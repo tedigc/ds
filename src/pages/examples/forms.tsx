@@ -1,6 +1,7 @@
 import React, { SyntheticEvent } from "react";
 import Head from "next/head";
 import { Button, Input } from "../../components";
+import { InputGroup } from "../../components/Input/Input";
 
 const Page = () => {
   const handleSubmit = (e: SyntheticEvent) => {
@@ -10,7 +11,7 @@ const Page = () => {
   return (
     <>
       <Head>
-        <title>Form</title>
+        <title>Examples - Forms</title>
       </Head>
       <div className="border-1 border-gray-50 p-8 rounded shadow-lg">
         <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
