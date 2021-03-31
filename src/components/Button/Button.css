@@ -1,5 +1,5 @@
 .btn {
-  @apply flex transition-all px-4 py-2 rounded;
+  @apply flex place-content-center transition-all px-4 py-2 rounded;
   @apply text-white text-base font-light;
   @apply disabled:bg-gray-300 disabled:cursor-not-allowed disabled:ring-0;
 }
