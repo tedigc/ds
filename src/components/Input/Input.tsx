@@ -27,11 +27,11 @@ export const InputGroup = ({ error, children }: InputGroupProps) => {
 export const InputPrefix = ({
   children,
 }: PropsWithChildren<Record<string, unknown>>) => {
-  return <div>{children}</div>;
+  return <div className="text-gray-500">{children}</div>;
 };
 
 export const InputSuffix = ({
   children,
 }: PropsWithChildren<Record<string, unknown>>) => {
-  return <div>{children}</div>;
+  return <div className="text-gray-500">{children}</div>;
 };
