@@ -34,12 +34,31 @@ export const Layout = ({ children }: LayoutProps) => {
           Bento Design System
         </p>
 
-        <p className="block text-gray-50 text-md mb-2">Components</p>
-        <NavLink href="/components/button">Button</NavLink>
-        <NavLink href="/components/input">Input</NavLink>
+        <div className="mb-6 flex flex-col">
+          <p className="block text-gray-50 text-md mb-2">Getting started</p>
+          <NavLink href="/">Introduction</NavLink>
+          <NavLink href="/quickstart">Quickstart</NavLink>
+          <NavLink href="/theming">Theming</NavLink>
+          <a
+            className="transition-all hover:text-indigo-50 text-indigo-400 py-1"
+            href="https://github.com/tedigc/ds"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
 
-        <p className="block text-gray-50 text-md mb-2 mt-6">Examples</p>
-        <NavLink href="/examples/forms">Forms</NavLink>
+        <div className="mb-6 flex flex-col">
+          <p className="block text-gray-50 text-md mb-2">Components</p>
+          <NavLink href="/components/button">Button</NavLink>
+          <NavLink href="/components/input">Input</NavLink>
+        </div>
+
+        <div className="mb-6 flex flex-col">
+          <p className="block text-gray-50 text-md mb-2 ">Examples</p>
+          <NavLink href="/examples/forms">Forms</NavLink>
+        </div>
       </nav>
       <div className="p-10">{children}</div>
     </div>
