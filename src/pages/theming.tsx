@@ -1,3 +1,4 @@
+import { Router } from "next/router";
 import React, { useState } from "react";
 import { Button } from "../components";
 import { useTheme, themes } from "../lib/theme";
@@ -5,6 +6,10 @@ import { useTheme, themes } from "../lib/theme";
 const Page = () => {
   const [theme, setTheme] = useState(null);
   useTheme(themes[theme]);
+
+  Router.events.on("routeChangeStart", () => {
+    setTheme("default");
+  });
 
   return (
     <div>

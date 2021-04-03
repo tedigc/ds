@@ -14,8 +14,8 @@ const NavLink = (props: NavLinkProps) => {
     <Link {...linkProps}>
       <a
         className={classnames(
-          "transition-all hover:text-indigo-50 py-1",
-          isActive ? "text-indigo-50" : "text-indigo-400"
+          "transition-all hover:text-primary-50 py-1",
+          isActive ? "text-primary-50" : "text-primary-400"
         )}
       >
         {children}
@@ -29,7 +29,7 @@ type LayoutProps = PropsWithChildren<{ [key: string]: unknown }>;
 export const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="flex">
-      <nav className="flex flex-col p-4 w-64 min-h-screen h-full bg-indigo-900 text-white ">
+      <nav className="flex flex-col p-4 w-64 min-h-screen h-full bg-primary-900 text-white ">
         <p className="block text-gray-50 text-xl mb-6 font-bold tracking-wide">
           Bento Design System
         </p>
@@ -40,7 +40,7 @@ export const Layout = ({ children }: LayoutProps) => {
           <NavLink href="/quickstart">Quickstart</NavLink>
           <NavLink href="/theming">Theming</NavLink>
           <a
-            className="transition-all hover:text-indigo-50 text-indigo-400 py-1"
+            className="transition-all hover:text-primary-50 text-primary-400 py-1"
             href="https://github.com/tedigc/ds"
             target="_blank"
             rel="noopener noreferrer"
