@@ -17,7 +17,6 @@ export type Theme = {
 export const useTheme = (theme: Theme) => {
   useEffect(() => {
     if (theme) {
-      console.log("changing theme...");
       Object.keys(theme).forEach((key) => {
         const name = `--ds-${key}`;
         const colour = theme[key];
