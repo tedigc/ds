@@ -1,6 +1,5 @@
-import "../styles/globals.css";
 import { Layout } from "../layouts";
-// import "tailwindcss/tailwind.css";
+import "../styles/globals.css";
 // import "../styles/theme.css";
 
 const App = ({ Component, pageProps }) => {
