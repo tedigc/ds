@@ -1,13 +1,16 @@
 import { Router } from "next/router";
+import classnames from "classnames";
 import React, { useState } from "react";
 import { Button } from "../components";
 import { useTheme, themes } from "../lib/theme";
 
 const Page = () => {
-  const [theme, setTheme] = useState(null);
+  const [ignoreTheme, setIgnoreTheme] = useState(true);
+  const [theme, setTheme] = useState("default");
   useTheme(themes[theme]);
 
   Router.events.on("routeChangeStart", () => {
+    setIgnoreTheme(true);
     setTheme("default");
   });
 
@@ -19,32 +22,54 @@ const Page = () => {
       <ul className="flex gap-5 mb-6">
         <li>
           <Button
-            variant={theme == "default" ? "primary" : "secondary"}
+            variant={
+              ignoreTheme && theme == "default" ? "primary" : "secondary"
+            }
             onClick={() => setTheme("default")}
+            className={classnames(
+              ignoreTheme && theme === "default"
+                ? "default-primary"
+                : "default-secondary"
+            )}
           >
             Default
           </Button>
         </li>
         <li>
           <Button
-            variant={theme == "cool" ? "primary" : "secondary"}
+            variant={ignoreTheme && theme == "cool" ? "primary" : "secondary"}
             onClick={() => setTheme("cool")}
+            className={classnames(
+              ignoreTheme && theme === "cool"
+                ? "cool-primary"
+                : "cool-secondary"
+            )}
           >
             Cool
           </Button>
         </li>
         <li>
           <Button
-            variant={theme == "burnt" ? "primary" : "secondary"}
+            variant={ignoreTheme && theme == "burnt" ? "primary" : "secondary"}
             onClick={() => setTheme("burnt")}
+            className={classnames(
+              ignoreTheme && theme === "burnt"
+                ? "burnt-primary"
+                : "burnt-secondary"
+            )}
           >
             Burnt
           </Button>
         </li>
         <li>
           <Button
-            variant={theme == "candy" ? "primary" : "secondary"}
+            variant={ignoreTheme && theme == "candy" ? "primary" : "secondary"}
             onClick={() => setTheme("candy")}
+            className={classnames(
+              ignoreTheme && theme === "candy"
+                ? "candy-primary"
+                : "candy-secondary"
+            )}
           >
             Candy
           </Button>
